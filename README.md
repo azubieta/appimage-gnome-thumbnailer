@@ -1,9 +1,4 @@
-gnome-thumbnailer-skeleton
+appimage-gnome-thumbnailer
 ==========================
 
-Skeleton files to create thumbnailers for GNOME
-
-See for example use:
-- https://git.gnome.org/browse/gnome-epub-thumbnailer
-- https://git.gnome.org/browse/gnome-nds-thumbnailer
-- https://github.com/hadess/fixpng-thumbnailer
+Generate thumbnails for AppImage files.
