@@ -1,7 +1,12 @@
 language: cpp
 compiler: gcc
-dist: xenial
 sudo: required
+
+matrix:
+  include:
+  - dist: trusty
+  - dist: xenial
+  - dist: precise
 
 addons:
   apt:
