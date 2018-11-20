@@ -16,6 +16,6 @@ target_include_directories(appimage-gnome-thumbnailer PRIVATE ${GLIB2_INCLUDE_DI
 target_link_libraries(appimage-gnome-thumbnailer ${GIO_LIBRARIES} ${GDK_LIBRARIES} ${GLIB2_LIBRARIES} m)
 
 target_compile_definitions(appimage-gnome-thumbnailer PRIVATE
-    THUMBNAILER_RETURNS_PIXBUF
+    THUMBNAILER_RETURNS_DATA
     THUMBNAILER_USAGE="Thumbnail AppImage files"
     )

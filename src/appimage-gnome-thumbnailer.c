@@ -1,8 +1,7 @@
 #include "gnome-thumbnailer-skeleton.h"
 
-GdkPixbuf* file_to_pixbuf(const char* path,
-                          guint destination_size,
-                          GError** error) {
-
+char* file_to_data(const char* path,
+                   gsize* ret_length,
+                   GError** error) {
 
 }
