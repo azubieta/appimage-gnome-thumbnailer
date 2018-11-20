@@ -14,12 +14,14 @@ externalproject_add(libappimage_as_external_project
 ExternalProject_Get_Property(libappimage_as_external_project install_dir)
 add_library(libappimage SHARED IMPORTED)
 
+# Required to avoid cmake complains about including an unexistent directory
+file(MAKE_DIRECTORY ${install_dir}/include)
+
 set_target_properties(libappimage PROPERTIES
     IMPORTED_LOCATION ${install_dir}/lib/libappimage.so
     INTERFACE_INCLUDE_DIRECTORIES ${install_dir}/include
     )
 
-message("CMAKE_INSTALL_PREFIX ${CMAKE_INSTALL_PREFIX}")
 install(FILES ${install_dir}/lib/libappimage.so DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/appimage-gnome-thumbnailer)
 set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib/appimage-gnome-thumbnailer")
 
