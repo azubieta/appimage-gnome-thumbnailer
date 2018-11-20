@@ -1,6 +1,9 @@
 project(appimage-gnome-thumbnailer)
 cmake_minimum_required(VERSION 3.2)
 
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD_REQUIRED On)
+
 find_package(libappimage QUIET)
 if(NOT TARGET libappimage)
     include(cmake/libappimage_as_external_project.cmake)
