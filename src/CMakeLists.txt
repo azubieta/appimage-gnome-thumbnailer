@@ -13,7 +13,7 @@ add_executable(appimage-gnome-thumbnailer
 
 target_include_directories(appimage-gnome-thumbnailer PRIVATE ${GLIB2_INCLUDE_DIRS} ${GDK_INCLUDE_DIRS} ${GIO_INCLUDE_DIRS})
 
-target_link_libraries(appimage-gnome-thumbnailer ${GIO_LIBRARIES} ${GDK_LIBRARIES} ${GLIB2_LIBRARIES} m)
+target_link_libraries(appimage-gnome-thumbnailer libappimage ${GIO_LIBRARIES} ${GDK_LIBRARIES} ${GLIB2_LIBRARIES} m)
 
 target_compile_definitions(appimage-gnome-thumbnailer PRIVATE
     THUMBNAILER_RETURNS_DATA
