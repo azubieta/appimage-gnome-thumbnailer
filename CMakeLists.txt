@@ -7,3 +7,4 @@ if(NOT TARGET libappimage)
 endif()
 
 add_subdirectory(src)
+add_subdirectory(res)

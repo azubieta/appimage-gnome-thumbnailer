@@ -1,0 +1,4 @@
+[Thumbnailer Entry]
+TryExec=@CMAKE_INSTALL_PREFIX@/bin/appimage-gnome-thumbnailer
+Exec=@CMAKE_INSTALL_PREFIX@/bin/appimage-gnome-thumbnailer -s %s %u %o
+MimeType=application/x-iso9660-appimage;application/x-appimage;application/vnd.appimage;
