@@ -19,3 +19,5 @@ target_compile_definitions(appimage-gnome-thumbnailer PRIVATE
     THUMBNAILER_RETURNS_DATA
     THUMBNAILER_USAGE="Thumbnail AppImage files"
     )
+
+install(TARGETS appimage-gnome-thumbnailer RUNTIME DESTINATION bin)
