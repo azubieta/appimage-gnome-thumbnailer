@@ -6,7 +6,6 @@ matrix:
   include:
   - dist: trusty
   - dist: xenial
-  - dist: precise
 
 addons:
   apt:
