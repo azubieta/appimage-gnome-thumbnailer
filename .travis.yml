@@ -1,0 +1,35 @@
+language: cpp
+compiler: gcc
+dist: trusty
+
+addons:
+  apt:
+    packages:
+    - wget
+    - cmake
+    - libglib2.0-dev
+    - libgdk-pixbuf2.0-dev
+    # libappimage deps
+    - desktop-file-utils
+    - libfuse-dev
+
+script:
+- cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/usr
+- make -j`nproc`
+- cpack -V -G DEB
+
+deploy:
+  provider: releases
+  api_key: "$GITHUB_TOKEN"
+  file_glob: true
+  file: ./*.deb
+  skip_cleanup: true
+  prerelease: true
+  overwrite: true
+  on:
+    repo: azubieta/appimage-gnome-thumbnailer
+    branch: master
+    tags: true
+
+notifications:
+  email: false
