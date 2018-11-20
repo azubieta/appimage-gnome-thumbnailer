@@ -1,17 +1,20 @@
 language: cpp
 compiler: gcc
 dist: trusty
+sudo: required
 
 addons:
   apt:
     packages:
     - wget
     - cmake
-    - libglib2.0-dev
-    - libgdk-pixbuf2.0-dev
     # libappimage deps
     - desktop-file-utils
     - libfuse-dev
+
+before_install:
+- sudo apt-get update
+- sudo apt-get install -y libglib2.0-dev libgdk-pixbuf2.0-dev
 
 script:
 - cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/usr
