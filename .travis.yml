@@ -28,7 +28,7 @@ script:
 after_success:
   # Add distribution code name to the end of the file name
 - OLD_FILE=$(echo *.deb)
-- FILE_NAME=$(basename OLD_FILE)
+- FILE_NAME=$(basename $OLD_FILE)
 - NEW_FILE_NAME="${FILE_NAME%.*}-$(lsb_release -c | cut -f 2).deb"
 - mv $OLD_FILE $NEW_FILE_NAME
 
