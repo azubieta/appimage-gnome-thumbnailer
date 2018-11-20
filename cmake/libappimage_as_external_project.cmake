@@ -19,6 +19,8 @@ set_target_properties(libappimage PROPERTIES
     INTERFACE_INCLUDE_DIRECTORIES ${install_dir}/include
     )
 
-
+message("CMAKE_INSTALL_PREFIX ${CMAKE_INSTALL_PREFIX}")
+install(FILES ${install_dir}/lib/libappimage.so DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/appimage-gnome-thumbnailer)
+set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib/appimage-gnome-thumbnailer")
 
 add_dependencies(libappimage libappimage_as_external_project)
