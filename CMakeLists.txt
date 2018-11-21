@@ -15,5 +15,6 @@ endif()
 add_subdirectory(src)
 add_subdirectory(res)
 
+include(cmake/cpack_generic.cmake)
 include(cmake/cpack_debian.cmake)
 
