@@ -1,5 +1,7 @@
-project(appimage-gnome-thumbnailer)
 cmake_minimum_required(VERSION 3.2)
+cmake_policy(SET CMP0048 NEW) # Allow version field in the project command
+
+project(appimage-gnome-thumbnailer VERSION 0.1.1)
 
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_STANDARD_REQUIRED On)
