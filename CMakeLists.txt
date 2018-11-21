@@ -17,4 +17,6 @@ add_subdirectory(res)
 
 include(cmake/cpack_generic.cmake)
 include(cmake/cpack_debian.cmake)
+include(cmake/cpack_rpm.cmake)
+include(CPack)
 
