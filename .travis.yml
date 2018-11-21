@@ -24,12 +24,13 @@ script:
 - cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/usr
 - make -j`nproc`
 - cpack -V -G DEB
+- cpack -V -G RPM
 
 deploy:
   provider: releases
   api_key: "$GITHUB_TOKEN"
   file_glob: true
-  file: ./*.deb
+  file: "./*.deb ./*.rpm"
   skip_cleanup: true
   prerelease: true
   overwrite: true
