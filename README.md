@@ -7,7 +7,7 @@ mime-type association.
 
 Downloads are available at the "downloads" tab.
 
-###Requirements
+### Requirements
 - gcc
 - gtk-2.0
 - cmake
@@ -15,7 +15,7 @@ Downloads are available at the "downloads" tab.
 - desktop-file-utils (if no libappimage)
 - libfuse-dev (if no libappimage)
 
-###Building 
+### Building 
  - git clone https://github.com/azubieta/appimage-gnome-thumbnailer.git
  - cd appimage-gnome-thumbnailer
  - cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/usr
