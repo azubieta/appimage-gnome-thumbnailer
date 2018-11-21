@@ -31,7 +31,9 @@ deploy:
   provider: releases
   api_key: "$GITHUB_TOKEN"
   file_glob: true
-  file: "./*.deb ./*.rpm"
+  file:
+  - "./*.deb"
+  - "./*.rpm"
   skip_cleanup: true
   prerelease: true
   overwrite: true
