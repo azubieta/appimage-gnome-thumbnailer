@@ -12,6 +12,7 @@ addons:
     packages:
     - wget
     - cmake
+    - rpm
     # libappimage deps
     - desktop-file-utils
     - libfuse-dev
